@@ -50,7 +50,7 @@ public class ArrayOps {
     }
 
     public static boolean containsTheSameElements(int [] array1,int [] array2) {
-        boolean find;
+        boolean find=false;
         if (array1.length != array2.length) {
             return false;
         }
@@ -70,6 +70,7 @@ public class ArrayOps {
             return false;
         }
         }
+    
         if (array2.length > array1.length){
             for(int i= 0; i< array2.length; i++){
              find = false;
@@ -79,11 +80,12 @@ public class ArrayOps {
                 break;
                 }
             }
-        }
+        
          if (!find){
             return  false;
         }
         }
+    }
         return true;
     }
 
