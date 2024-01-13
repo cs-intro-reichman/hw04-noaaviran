@@ -36,13 +36,13 @@ public class ArrayOps {
 
         for (int i=1; i< array.length; i++){
             if (array[i] > max){
-                secondMax=max;
+                secondMax= max;
                 max= array[i];
             } else if(array[i] > secondMax && array[i] != max) {
             secondMax = array[i];
         }
     }
-        return secondMax;
+    return (secondMax == max) ? -1 : secondMax;
     }
 
 
@@ -69,7 +69,7 @@ public class ArrayOps {
     
         return true;
     }
-    
+
     public static boolean isSorted(int [] array) {
         boolean goingDown= true;
         boolean goingUp= true;
