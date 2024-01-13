@@ -34,7 +34,7 @@ public class ArrayOps {
 
     public static int secondMaxValue(int [] array) {
         int max = array[0];
-        int secondMax = 0;
+        int secondMax = [0];
         for (int i=0; i< array.length; i++){
             if (array[i] > max){
                 max= array[i];
@@ -50,7 +50,11 @@ public class ArrayOps {
     }
 
     public static boolean containsTheSameElements(int [] array1,int [] array2) {
-        boolean find= false;
+        boolean find;
+        if (array1.length != array2.length) {
+            return false;
+        }
+
 
         if (array1.length >= array2.length) {
         for(int i= 0; i< array1.length; i++){
@@ -88,10 +92,13 @@ public class ArrayOps {
         boolean goingUp= true;
         for (int i=0; i  < array.length-1; i++){
             if (array[i] < array[i+1]){
-                return goingUp;
+                goingDown= false;
             }
             else if (array[i] > array[i+1]){
-                return goingDown;
+                goingUp= false;
+            }
+            if (!goingDown && !goingUp){
+                return false;
             }
         }
             return goingDown || goingUp;
