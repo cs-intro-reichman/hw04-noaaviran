@@ -70,11 +70,12 @@ public class StringOps {
 
         for (int i=0; i<string.length(); i++) {
             char currentchar= string.charAt(i);
+
         if(currentchar == ' '){
             capitalletter= true;
         } else {
             if (capitalletter) {
-                newst = newst + upperCase(currentchar);
+                newst = newst + lowerCase(currentchar);
                 capitalletter = false;
             } else {
                 newst = newst + lowerCase(currentchar);
