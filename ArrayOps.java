@@ -2,9 +2,7 @@ import java.util.Arrays;
 
 public class ArrayOps {
     public static void main(String[] args) {
-        int[] array1= {1, 2, 1, 1};
-        int[] array2= {2,1};
-        System.out.println(containsTheSameElements(array1, array2));
+       
         
     }
     
@@ -40,14 +38,14 @@ public class ArrayOps {
             if (array[i] > max){
                 secondMax=max;
                 max= array[i];
-            } 
-        
-        } else if (array[i] > secondMax && array[i] != max) {
+            }   if  (array[i] > secondMax && array[i] != max) {
             secondMax = array[i];
         
         }
         return secondMax;
     }
+}
+
 
     public static boolean containsTheSameElements(int [] array1,int [] array2) {
         boolean find=false;
