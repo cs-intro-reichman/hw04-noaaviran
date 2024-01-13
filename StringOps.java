@@ -66,7 +66,7 @@ public class StringOps {
     public static String camelCase (String string) {
         
         String newst="";
-        boolean capitalletter= true;
+        boolean capitalletter= false;
 
         for (int i=0; i<string.length(); i++) {
             char currentchar= string.charAt(i);
