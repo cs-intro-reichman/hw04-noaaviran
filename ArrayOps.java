@@ -38,13 +38,12 @@ public class ArrayOps {
             if (array[i] > max){
                 secondMax=max;
                 max= array[i];
-            }   if  (array[i] > secondMax && array[i] != max) {
+            }else if  (array[i] > secondMax && array[i] != max) {
             secondMax = array[i];
-        
         }
+    }
         return secondMax;
     }
-}
 
 
     public static boolean containsTheSameElements(int [] array1,int [] array2) {
