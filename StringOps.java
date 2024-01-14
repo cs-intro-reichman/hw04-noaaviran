@@ -82,6 +82,9 @@ public class StringOps {
             }
         }
     }
+    if ((newst.charAt(0) >= 'A') && (newst.charAt(0)) <= 'Z'){
+        newst = lowerCase(newst.charAt(0)) + newst.substring(1, newst.length());
+    } 
     return newst;
 }
 
