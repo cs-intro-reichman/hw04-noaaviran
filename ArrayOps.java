@@ -41,12 +41,13 @@ public class ArrayOps {
                 counter= i;
             } 
             array[counter]=0;
-        }  for (int i=1; i< array.length; i++){
+        }  for (int i=0; i< array.length; i++){
             if (array[i] > secondMax) {
                 secondMax= array[i];
             }
+        }
     return secondMax;
-    }
+    
     }
 
     public static boolean containsTheSameElements(int [] array1,int [] array2) {
