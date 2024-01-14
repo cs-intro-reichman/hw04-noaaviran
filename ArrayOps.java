@@ -2,8 +2,7 @@ import java.util.Arrays;
 
 public class ArrayOps {
     public static void main(String[] args) {
-       int[] arr = {0,1,2,3,3};
-       System.out.println(secondMaxValue(arr));
+       
         
     }
     
@@ -43,7 +42,7 @@ public class ArrayOps {
             } 
             array[counter]=0;
         }  for (int i=1; i< array.length; i++){
-            if (array[i] > secondMaxmax) {
+            if (array[i] > secondMax) {
                 secondMax= array[i];
             }
     return secondMax;
