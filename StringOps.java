@@ -75,10 +75,10 @@ public class StringOps {
             capitalletter= true;
         } else {
             if (capitalletter) {
-                newst = newst + upperCase(currentchar);
+                newst = newst + lowerCase(currentchar);
                 capitalletter = false;
             } else {
-                newst = newst + lowerCase(currentchar);
+                newst = newst + currentchar;
             }
         }
     }
