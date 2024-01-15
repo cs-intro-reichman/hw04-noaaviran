@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class StringOps {
     ////////////////////////////////////////////////////////////
     //////                                               ///////
@@ -22,21 +24,84 @@ public class StringOps {
     //////                                               ///////
     ////////////////////////////////////////////////////////////
     public static void main(String[] args) {
-        
+       
     }
 
-    public static String capVowelsLowRest (String string) {
-        // Write your code here:
-        return "";
+    public static String capVowelsLowRest (String str) {
+        String result= "";
+
+        for (int i=0; i<str.length(); i++){
+            char current = str.charAt(i);
+            
+            if(isVowel(current)){
+            result= result + upperCase(current);
+            } else {
+            result= result + lowerCase(current);
+            }
+        }
+        return result;
+    }
+
+    private static boolean isVowel(char ch){
+        return "aeiouAEIOU".indexOf(ch) != -1;
+    }
+
+    private static char lowerCase(char ch) {
+        if ((ch >= 'A') && (ch <= 'Z')) {
+            int newChar = ch - 'A' + 'a';
+            return (char) newChar;
+        } else {
+            return ch;
+    }
+}
+    private static char upperCase(char ch) {
+        if ((ch >= 'a') && (ch <= 'z')) {
+            int newChar = ch - 'a' + 'A';
+            return (char) newChar;
+        } else {
+            return ch;
+        }
     }
 
     public static String camelCase (String string) {
-        // Write your code here:
-        return "";
+        
+        String newst="";
+        boolean capitalletter= false;
+
+        for (int i=0; i<string.length(); i++) {
+            char currentchar= string.charAt(i);
+
+        if(currentchar == ' '){
+            capitalletter= true;
+        } else {
+            if (capitalletter) {
+                newst = newst + upperCase(currentchar);
+                capitalletter = false;
+            } else {
+                newst = newst + lowerCase(currentchar);
+            }
+        }
+    }
+    if ((newst.charAt(0) >= 'A') && (newst.charAt(0)) <= 'Z'){
+        newst = lowerCase(newst.charAt(0)) + newst.substring(1, newst.length());
+    } 
+    return newst;
+}
+
+public static int[] allIndexOf(String string, char chr) {
+    int[] indexes = new int[string.length()];
+    int currentIndex = 0;
+
+    for (int index = string.indexOf(chr); index != -1; index = string.indexOf(chr, index + 1)) {
+        indexes[currentIndex++] = index;
     }
 
-    public static int[] allIndexOf (String string, char chr) {
-        // Write your code here:
-        return new int[1];
+    int[] result = new int[currentIndex];
+
+    for (int i = 0; i < currentIndex; i++) {
+        result[i] = indexes[i];
     }
+
+    return result;
+}
 }
