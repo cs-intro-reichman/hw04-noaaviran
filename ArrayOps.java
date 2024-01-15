@@ -69,7 +69,7 @@ public class ArrayOps {
          }
          for (int i = 0; i < countArray1.length; i++) {
             int count = countArray1[i];
-            if (count < 0) {
+            if (count != 0) {
                 return false;
         }
     }
