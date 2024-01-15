@@ -66,14 +66,16 @@ public class ArrayOps {
          for (int i = 0; i < array2.length; i++){
             int element= array2[i];
             countArray1[element] = countArray1[element] -1;
-         
-         if (countArray1[element]< 0){
-            return false;
          }
+            for (int count : countArray1) {
+                if (count < 0) {
+                    return false;
+                }
         }
          return true;
         
          }
+        
     
 
     public static boolean isSorted(int [] array) {
