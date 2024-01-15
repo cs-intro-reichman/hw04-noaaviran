@@ -56,25 +56,23 @@ public class ArrayOps {
         boolean find=false;
         if (array1.length != array2.length) {
             return false;
-        }
+        } 
+        int[] countArray1= new int[9999];
 
         for (int i = 0; i < array1.length; i++) {
-            boolean found = false;
-    
-            for (int j = 0; j < array2.length; j++) {
-                if (array1[i] == array2[j]) {
-                    found = true;
-                    break;
-                }
-            }
-    
-            if (!found) {
-                return false;
-            }
-        }
-    
-        return true;
+          int element= array1[i];
+          countArray1[element]= countArray1[element]+1;
     }
+         for (int i = 0; i < array2.length; i++){
+            int element= array2[i];
+            countArray1[element] = countArray1[element] -1;
+         }
+         if (countArray1[element]< 0){
+            return false;
+         }
+         return true;
+         }
+    
 
     public static boolean isSorted(int [] array) {
         boolean goingDown= true;
