@@ -60,11 +60,11 @@ public class ArrayOps {
 
         int[] countArray1= new int[256];
 
-        for (int element = 0; element < array1.length; i++) {
+        for (int element = 0; element < array1.length; element++) {
           countArray1[element]= countArray1[element]+1;
     }
 
-         for (int element = 0; element < array2.length; i++){
+         for (int element = 0; element < array2.length; element++){
             if (countArray1[element] == 0) {
                 return false;
             }
