@@ -67,11 +67,12 @@ public class ArrayOps {
             int element= array2[i];
             countArray1[element] = countArray1[element] -1;
          }
-            for (int count : countArray1) {
-                if (count < 0) {
-                    return false;
-                }
+         for (int i = 0; i < countArray1.length; i++) {
+            int count = countArray1[i];
+            if (count <= 0) {
+                return false;
         }
+    }
          return true;
         
          }
